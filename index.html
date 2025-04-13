@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fouzia Laugh</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #ffebee;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      margin: 20px auto;
+      max-width: 700px;
+    }
+    button {
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #e91e63;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #c2185b;
+    }
+    h1 {
+      font-size: 40px;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+    .text-box {
+      font-size: 22px;
+      margin: 20px 0;
+    }
+    .emoji {
+      font-size: 36px;
+      margin: 10px 0;
+    }
+    .laugh-line {
+      font-size: 18px;
+      color: #555;
+      margin-top: 15px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>😂 Fouzia Laugh 😂</h1>
+  <p class="laugh-line">Warning: Laughter is guaranteed. Sadness not allowed!</p>
+
+  <div class="card">
+    <div class="text-box" id="boringText">Click below to start laughing loudly!</div>
+    <div class="emoji" id="emotionEmoji">🤣</div>
+    <div class="laugh-line" id="laughLine">Let the silliness begin!</div>
+    <button onclick="generateDrama()">Make Me Laugh!</button>
+  </div>
+
+  <script>
+    const boringTexts = [
+      "Apply shampoo. Realize it's conditioner. Scream in confusion.",
+      "Microwave beeps. You pretend you're a spy diffusing a bomb.",
+      "Why do pizzas come round, in square boxes, and eaten as triangles?",
+      "Spilled water. Now it's a Slip 'n Slide Championship.",
+      "Accidentally clicked 'Reply All'. Now you live in exile.",
+      "Put socks on, stepped in something wet. Existential crisis begins.",
+      "Dog stared at me for 10 mins. Probably judging my life choices.",
+      "Typed LOL but didn’t laugh. Computer feels betrayed.",
+      "Phone dropped on face. Gravity wins again.",
+      "Mirror said 'yikes'. Confidence.exe has stopped working."
+    ];
+
+    const emotions = [
+      "😜 Wacky Cartoon Voice",
+      "👑 Royal But Hilarious",
+      "🧙‍♂️ Wise Wizard Telling a Joke",
+      "🎤 Game Show Host Mode",
+      "🐸 Sassy Frog Style",
+      "👽 Alien Trying Comedy",
+      "🧛 Dramatic Vampire Monologue",
+      "🎭 Oscar-worthy Comedy",
+      "💃 Dancing Diva Delivery",
+      "🤖 Robot with Emotion Overload"
+    ];
+
+    const laughLines = [
+      "🤣 Try not to snort while laughing!",
+      "😂 Fouzia, if you're not laughing, you're lying!",
+      "😆 This should be illegal it's so funny!",
+      "😁 Warning: Side effects include happy tears!",
+      "🤣 You're about to laugh like a villain!",
+      "😂 Even your sad mood just rage quit!",
+      "😹 Cats are jealous of this much joy.",
+      "😄 No refunds, just relentless laughter!",
+      "😆 You'll be quoting this at 3 AM.",
+      "😂 Your laugh echo will break the space-time continuum!"
+    ];
+
+    function generateDrama() {
+      const randomText = boringTexts[Math.floor(Math.random() * boringTexts.length)];
+      const randomEmotion = emotions[Math.floor(Math.random() * emotions.length)];
+      const randomLaugh = laughLines[Math.floor(Math.random() * laughLines.length)];
+
+      document.getElementById("boringText").textContent = randomText;
+      document.getElementById("emotionEmoji").textContent = randomEmotion;
+      document.getElementById("laughLine").textContent = randomLaugh;
+    }
+  </script>
+
+</body>
+</html>
